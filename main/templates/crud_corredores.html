@@ -1,0 +1,26 @@
+<h1>Gestión de Corredores</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>RUT</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for corredor in corredores %}
+        <tr>
+            <td>{{ corredor.nombre }}</td>
+            <td>{{ corredor.rut }}</td>
+            <td>{{ corredor.correo }}</td>
+            <td>{{ corredor.telefono }}</td>
+            <td>
+                <!-- Agrega botones de editar/eliminar aquí -->
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'home' %}">Volver al Inicio</a>

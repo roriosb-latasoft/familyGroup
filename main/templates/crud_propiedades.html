@@ -1,0 +1,24 @@
+<h1>Gestión de Propiedades</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for propiedad in propiedades %}
+        <tr>
+            <td>{{ propiedad.nombre }}</td>
+            <td>{{ propiedad.valor_clp }}</td>
+            <td>{{ propiedad.direccion }}</td>
+            <td>
+                <!-- Agrega botones de editar/eliminar aquí -->
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'home' %}">Volver al Inicio</a>
